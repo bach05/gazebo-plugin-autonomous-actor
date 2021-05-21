@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<package format="2">
+  <name>gazebo-plugin-autonomous-actor</name>
+  <version>0.0.0</version>
+  <description>
+    The autonomous actor plugin allows the actor to move randomly in the specified room avoiding ostacles both static and dynamic.
+  </description>
+  <maintainer email="TODO@todo.todo">Bacchin Alberto</maintainer>
+  <author email="TODO@todo.todo">Bacchin Alberto</author>
+  <license>TODO</license>
+  <url type="website">TODO</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>gazebo_person_detection</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>gazebo_person_detection</exec_depend>
+
+  <export>
+    <gazebo_ros plugin_path="${prefix}/lib" gazebo_media_path="${prefix}"/>
+  </export>
+
+</package>

@@ -1,0 +1,562 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>20</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <model name="wall_1_model">
+      <pose>10 3 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_1_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_2_model">
+      <pose>10 20 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_2_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 0.2 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 0.2 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_3_model">
+      <pose>4 11.5 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_3_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 17 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 17 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_4_model">
+      <pose>16 11.5 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_4_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 17 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 17 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_5_model">
+      <pose>7 16 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_5_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>6 0.2 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>6 0.2 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_6_model">
+      <pose>14.5 16 1 0 0 0</pose>
+      <static>true</static>
+      <link name="wall_6_body">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>1.0</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>1.0</iyy>
+            <iyz>0.0</iyz>
+            <izz>1.0</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>3 0.2 2</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>3 0.2 2</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+  <!-- The following objects comes from a Tiago++ simulation -->
+
+    <!-- Add a chair -->
+    <include>
+      <uri>model://dining_chair</uri>
+      <pose>12.5 5.5 0.01 0 0 0</pose>
+    </include>
+    <!-- Add a kitchen table 0 -->
+    <include>
+      <name>kitchen_table0</name>
+      <uri>model://kitchen_table</uri>
+      <pose>12.000000 6.5 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+
+<!-- Add a kitchen table 1 -->
+    <include>
+      <uri>model://kitchen_table</uri>
+      <name>kitchen_table1</name>
+      <pose>8.000000 10.5 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+
+<!-- Add a kitchen table 2 -->
+    <include>
+      <uri>model://kitchen_table</uri>
+      <name>kitchen_table2</name>
+      <pose>12.360000 11.5 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+
+<!-- Add a kitchen table 3 -->
+    <include>
+      <uri>model://kitchen_table</uri>
+      <name>kitchen_table3</name>
+      <pose>7.5 7.5 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+
+    <!-- Add a wardrobe -->
+    <include>
+      <uri>model://wardrobe</uri>
+      <pose>12.000000 19.000000 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+    <!-- Add a closet -->
+    <include>
+      <uri>model://closet</uri>
+      <pose>6.000000 3.000000 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+    <!-- Add a bench -->
+    <include>
+      <uri>model://bench</uri>
+      <pose>4.3 11.502710 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+    <!-- Add a sofa -->
+    <include>
+      <uri>model://sofa</uri>
+      <pose>9.5 19.000000 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+    <!-- Add a floor lamp -->
+    <include>
+      <name>floor_lamp_0</name>
+      <uri>model://floor_lamp</uri>
+      <pose>9.000000 19.417350 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+    <!-- Add a floor lamp -->
+    <include>
+      <name>floor_lamp_1</name>
+      <uri>model://floor_lamp</uri>
+      <pose>14.700000 15.50000 0.000000 0.000000 0.000000 0.000000</pose>
+    </include>
+
+
+<!-- Create a static collision model -->
+<model name="actor0_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+
+<actor name="actor0">
+    <pose>10 10 0 0 0 0</pose>
+    <skin>
+    <filename>walk.dae</filename>
+    <scale>1.0</scale>
+    </skin>
+    <animation name="walking">
+    <filename>walk.dae</filename>
+    <scale>1.000000</scale>
+    <interpolate_x>true</interpolate_x>
+    </animation>
+
+    <plugin name="actor0_plugin" filename="libAutonomousActorPlugin.so">
+    <target_weight>1.15</target_weight>
+    <obstacle_weight>1.8</obstacle_weight>
+    <animation_factor>5.1</animation_factor>
+  <!-- Usage: Initial pose of the actor -->
+    <init_position>10 10 1.0</init_position>
+    <!-- Usage: Modify the set of models that the vector field should
+            ignore when moving the actor -->
+    <ignore_obstacles>
+        <model>ground_plane</model>
+	<model>actor0_collision_model</model>
+	<model>actor1_collision_model</model>
+	<model>actor2_collision_model</model>
+	<model>actor3_collision_model</model>
+    </ignore_obstacles>
+  <!-- Usage: Specify which other actors you want to avoid during wandering -->
+    <actor_awareness>
+        <model>actor1</model>
+        <model>actor2</model>
+        <model>actor3</model>
+    </actor_awareness>
+ <!-- Usage: Specify the first target -->
+     <target>12 13 1.0</target>
+<!-- Usage: Specify the region where the random targets are computed, it is recommended to stay 0.5 meters from walls -->
+	<room_x>4.5 15.5</room_x>
+	<room_y>3.5 15.5</room_y>
+	<room_z>1.0</room_z>
+    </plugin>
+
+ <!-- Actor Plugin -->
+    <!-- Enable collisions -->
+    <plugin name="attach_model0" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>actor0_pose</link_name>
+        <model>
+          <model_name>actor0_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+
+
+</actor>
+
+
+<!-- Create a static collision model -->
+<model name="actor1_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+
+<actor name="actor1">
+    <pose>12 8 0 0 0 0</pose>
+    <skin>
+    <filename>walk.dae</filename>
+    <scale>1.0</scale>
+    </skin>
+    <animation name="walking">
+    <filename>walk.dae</filename>
+    <scale>1.000000</scale>
+    <interpolate_x>true</interpolate_x>
+    </animation>
+
+
+    <plugin name="actor1_plugin" filename="libAutonomousActorPlugin.so">
+    <target_weight>1.15</target_weight>
+    <obstacle_weight>1.8</obstacle_weight>
+    <animation_factor>5.1</animation_factor>
+    <init_position>12 8 1.0</init_position>
+    <ignore_obstacles>
+        <model>ground_plane</model>
+	<model>actor0_collision_model</model>
+	<model>actor1_collision_model</model>
+	<model>actor2_collision_model</model>
+	<model>actor3_collision_model</model>
+    </ignore_obstacles>
+    <actor_awareness>
+        <model>actor0</model>
+        <model>actor2</model>
+        <model>actor3</model>
+    </actor_awareness>
+     <target>7.5 13.5 1.0</target>
+	<room_x>4.5 15.5</room_x>
+	<room_y>3.5 15.5</room_y>
+	<room_z>1.0</room_z>
+    </plugin>
+
+<!-- Actor Plugin -->
+    <!-- Enable collisions -->
+    <plugin name="attach_model0" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>actor1_pose</link_name>
+        <model>
+          <model_name>actor1_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+
+</actor>
+
+
+ <!-- Create a static collision model -->
+<model name="actor2_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+
+<actor name="actor2">
+    <pose>8 6 0 0 0 0</pose>
+    <skin>
+    <filename>walk.dae</filename>
+    <scale>1.0</scale>
+    </skin>
+    <animation name="walking">
+    <filename>walk.dae</filename>
+    <scale>1.000000</scale>
+    <interpolate_x>true</interpolate_x>
+    </animation>
+
+    <plugin name="actor2_plugin" filename="libAutonomousActorPlugin.so">
+    <target_weight>1.15</target_weight>
+    <obstacle_weight>1.8</obstacle_weight>
+    <animation_factor>5.1</animation_factor>
+    <init_position>8 6 1.0</init_position>
+    <ignore_obstacles>
+        <model>ground_plane</model>
+	<model>actor0_collision_model</model>
+	<model>actor1_collision_model</model>
+	<model>actor2_collision_model</model>
+	<model>actor3_collision_model</model>
+    </ignore_obstacles>
+    <actor_awareness>
+        <model>actor0</model>
+        <model>actor1</model>
+        <model>actor3</model>
+    </actor_awareness>
+     <target>7.5 12 1.0</target>
+	<room_x>4.5 15.5</room_x>
+	<room_y>3.5 15.5</room_y>
+	<room_z>1.0</room_z>
+    </plugin>
+
+ <!-- Actor Plugin -->
+    <!-- Enable collisions -->
+    <plugin name="attach_model1" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>actor2_pose</link_name>
+        <model>
+          <model_name>actor2_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+
+</actor>
+
+
+<!-- Create a static collision model -->
+<model name="actor3_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+<actor name="actor3">
+    <pose>8 4.5 0 0 0 2.75</pose>
+    <skin>
+    <filename>stand.dae</filename>
+    <scale>1.0</scale>
+    </skin>
+
+    <animation name="standing">
+    <filename>stand.dae</filename>
+    </animation>
+
+<!-- Need one waypoint to idle at -->
+    <script>
+        <trajectory id='0' type='standing'>
+        <waypoint>
+            <time>100</time>
+            <pose>
+                8
+                4.5
+                0.0
+                0.0
+                0.0
+                2.75
+            </pose>
+        </waypoint>
+        </trajectory>
+    </script>
+
+ <!-- Actor Plugin -->
+    <!-- Enable collisions -->
+    <plugin name="attach_model1" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>actor3_pose</link_name>
+        <model>
+          <model_name>actor3_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+
+</actor>
+
+ 
+
+    <!-- Change the gazebo camera point of view -->
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>10 10 25 0.000000 1.57 1.57</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  </world>
+</sdf>
+
+

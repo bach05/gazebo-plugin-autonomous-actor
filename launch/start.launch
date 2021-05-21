@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+  <arg name="custom" default="false" />
+  <arg name="custom_prefix" default="" />
+  <arg if="$(arg custom)" name="world_name" default="$(arg custom_prefix).world" />
+  <arg unless="$(arg custom)" name="world_name" value="$(find gazebo-plugin-autonomous-actor)/worlds/demo_cafe.world"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <env name="GAZEBO_RESOURCE_PATH" value="$(find gazebo-plugin-autonomous-actor)/worlds:$(find gazebo-plugin-autonomous-actor)"/>
+    <env name="GAZEBO_MODEL_PATH" value="$(find gazebo-plugin-autonomous-actor)/models"/>
+    <env name="GAZEBO_PLUGIN_PATH" value="$(find gazebo-plugin-autonomous-actor)/plugins"/>
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="verbose" value="true"/>
+  </include>
+
+</launch>
