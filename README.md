@@ -20,6 +20,23 @@ catkin build
 Add your plugin in your sdf world file, under actor tag as in this example:  
 
 ```xml
+
+<model name="actor0_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+
 <actor name="actor0">
     <pose>10 10 0 0 0 0</pose>
     <skin>
