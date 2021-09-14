@@ -12,7 +12,7 @@
 #include <fstream>
 #include <string>
 
-#include "gazebo_person_detection/actor_vel.h"
+//#include "gazebo_person_detection/actor_vel.h"
 
 using namespace gazebo;
 GZ_REGISTER_MODEL_PLUGIN(AutoActorPlugin)
@@ -148,7 +148,7 @@ void AutoActorPlugin::Load(physics::ModelPtr _model, sdf::ElementPtr _sdf)
   check_pose = init_pose;
 
   //Publisher initialization
-  pub = nh.advertise<gazebo_person_detection::actor_vel>("actor_velocities", 1, true);
+  //pub = nh.advertise<gazebo_person_detection::actor_vel>("actor_velocities", 1, true);
 
   direction = (this->target - init_pose).Normalize();
 }
@@ -523,7 +523,7 @@ void AutoActorPlugin::OnUpdate(const common::UpdateInfo &_info)
   // Time delta
   double dt = (_info.simTime - this->lastUpdate).Double();
 
-  gazebo_person_detection::actor_vel msg;
+  //gazebo_person_detection::actor_vel msg;
 
   ignition::math::Pose3d pose = this->actor->WorldPose();
   ignition::math::Vector3d pos = this->target - pose.Pos();
@@ -657,14 +657,16 @@ void AutoActorPlugin::OnUpdate(const common::UpdateInfo &_info)
                              (distanceTraveled * this->animationFactor));
   this->lastUpdate = _info.simTime;
 
+  /* 
   msg.id = (int)(this->actor->GetName().back()) - '0';
   msg.twist.header.frame_id = "world";
   msg.twist.header.stamp = ros::Time::now();
   msg.twist.twist.linear.x = pos.X() * this->velocity.X();
   msg.twist.twist.linear.y = pos.Y() * this->velocity.Y();
   msg.twist.twist.angular.z = yaw.Radian() * this->rot_velocity;
+  */
 
-  pub.publish(msg);
+  //pub.publish(msg);
 
 #ifdef DEBUG_
   // For debug
