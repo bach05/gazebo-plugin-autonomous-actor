@@ -6,26 +6,16 @@ The package works under some assumption and the obstacle avoidance is not perfec
 
 If you use this package for academic reasearch, please cite our work accepted for the 10th European Conference on Mobile Robots (ECMR 2021): 
 
-```bash
-
+```
 @INPROCEEDINGS{bacchin-beraldo,
-
   author={Bacchin, Alberto and Beraldo, Gloria and Menegatti, Emanuele},
-
   booktitle={2021 European Conference on Mobile Robots (ECMR)}, 
-
   title={Learning to plan people-aware trajectories for robot navigation: A genetic algorithm}, 
-
   year={2021},
-  
   volume={},
-
   number={},
-
   pages={},
-
   doi={}
-
 }
 ```
 
